@@ -45,9 +45,9 @@
         <p>Filtern nach:</p>
         <form>
             <label for="country">Land:</label>
-            <input type="text" id="country" name="country" placeholder="Land">
+            <input type="text" id="country" name="country" placeholder="Land" oninput="filterByCountry()">
             <label for="emission">Emission:</label>
-            <input type="text" id="emission" name="emission" placeholder="Emission">
+            <input type="text" id="emission" name="emission" placeholder="Emission" oninput="filterByEmission()">
             <input type="submit" value="Filtern">
         </form>
 
@@ -126,6 +126,5 @@
         </footer>
         <!-- include javascript -->
         <script src="js/footprints.js"></script>
-    </div>
-</body>
+
 </html>
