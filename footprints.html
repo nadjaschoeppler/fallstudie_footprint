@@ -8,8 +8,8 @@
     <meta name="author" content="Nadja Schöppler">
 
 
-    <!-- Bootstrap CSS -->
-    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"-->
+    <!-- icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/footprints.css">
 </head>
@@ -19,11 +19,15 @@
         <img id="logo" src="images/footprints.png" alt="footprints logo" width="200" height="200">
         <h1>Footprints</h1>
         <nav>
-            <ul>
+            <ul id="menuItems">
                 <li><a href="#footer">Rechtliches</a></li>
                 <li><a href="#about">Über diese Seite</a></li>
                 <li><a href="#table">Carbon Emissionen</a></li>
-            </ul>
+          
+            </ul>  
+               <a id="hamburger" href="javascript:void(0);" class="icon" onclick="toggleHamburger()">
+                    <i class="fa fa-bars"></i>
+                  </a>
         </nav>
     </header>
 
@@ -120,6 +124,7 @@
             <li>Carbon Emissions of Countries: <a
                     href="https://climatetrade.com/which-countries-are-the-worlds-biggest-carbon-polluters/">https://climatetrade.com/which-countries-are-the-worlds-biggest-carbon-polluters</a>
             </li>
+            <li>Concept for a Hamburger menu: <a href="https://www.w3schools.com/howto/howto_js_mobile_navbar.asp">https://www.w3schools.com/howto/howto_js_mobile_navbar.asp</a></li>
         </ul>
         <p>© 2023 Footprints</p>
 

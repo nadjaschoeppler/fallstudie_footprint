@@ -81,7 +81,7 @@ nav ul li a {
     font-weight: bold;
 }
 #table {
-    border: 1px solid #000;
+    border: 2px outset #000;
     border-radius: 10px;
     margin: 2em;
     padding: 2em;
@@ -134,13 +134,28 @@ input {
     font-size: 0.8em;
     margin-top: 1em;
 }
+#hamburger {
+    display: none;
+}
 
 /* media query for small mobile devices */
 @media only screen and (max-width: 481px) {
 
     /* colapse the nav bar and hide the menu items */
-    nav {
-        display: none;
+    nav ul {
+        display: none; 
+    }
+    nav ul li {
+        width: 8em;
+    }
+    /* show the hamburger menu */
+    #hamburger {
+        display: block;
+        margin: 0.5em;
+        padding: 0.5em;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: #c9b6f3;
     }
     header {
         display: flex;

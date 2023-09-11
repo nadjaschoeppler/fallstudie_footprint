@@ -6,12 +6,12 @@ function sortTable(table, col, reverse) {
   reverse = -((+reverse) || -1);
   tr = tr.sort(function (a, b) { // sort rows
     return reverse // `-1 *` if want opposite order
-        * (a.cells[col].textContent.trim() 
+        * (a.cells[col].textContent.trim()
             .localeCompare(b.cells[col].textContent.trim())
            );
   });
-  for(var i = 0; i < tr.length; ++i) 
-        tb.appendChild(tr[i]); 
+  for(var i = 0; i < tr.length; ++i)
+        tb.appendChild(tr[i]);
 }
 /* simplify the sortTable function by directly accessing the tables */
 function sortByCountry() {
@@ -38,4 +38,13 @@ function filterByCountry() {
 }
 function filterByEmission() {
     filterTable(document.getElementById('footprint-table'), 1, document.getElementById('emission').value);
+}
+
+function toggleHamburger() {
+    var menu = document.getElementById("menuItems");
+    if (menu.style.display === "flex") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "flex";
+    }
 }
