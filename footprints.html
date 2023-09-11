@@ -9,122 +9,123 @@
 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"-->
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/footprints.css">
 </head>
 
 <body>
-    <nav>
-        <img src="images/footprints.png" alt="footprints logo" width="200" height="200">
-        <ul>
-            <li><a href="#footer">Rechtliches</a></li>
-            <li><a href="#about">Über diese Seite</a></li>
-            <li><a href="#table">Carbon Emissionen</a></li>
-
-        </ul>
-    </nav>
-    <div id="header">
+    <header>
+        <img id="logo" src="images/footprints.png" alt="footprints logo" width="200" height="200">
         <h1>Footprints</h1>
-    </div>
-    <!-- html article element 'about' -->
-    <article id="about">
-        <h2>Über diese Seite</h2>
-        <p>Footprints gives an overview about carbon emissions blablablabla.</p>
-        <p>Footprints is developed by </p>
+        <nav>
+            <ul>
+                <li><a href="#footer">Rechtliches</a></li>
+                <li><a href="#about">Über diese Seite</a></li>
+                <li><a href="#table">Carbon Emissionen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- html article element 'about' -->
+        <article id="about">
+            <h2>Über diese Seite</h2>
+            <p>Footprints gives an overview about carbon emissions blablablabla.</p>
+            <p>Footprints is developed by </p>
+            <ul>
+                <li>Schöppler, Nadja</li>
+
+            </ul>
+            <p>in a student project for IU.</p>
+        </article>
+        <!-- html table with carbon emissions per country -->
+        <div id="table">
+            <h2>Carbon Emmissionen per Land</h2>
+            <p>Die folgende Tabelle zeigt die Carbon Emissionen der 10 Länder mit den höchsten Emissionen.</p>
+           
+            <form id="filter-form">
+                <h3>Filtern nach:</h3>
+                <label for="country">Land:</label><br>
+                <input type="text" id="country" name="country" placeholder="Land" oninput="filterByCountry()"><br>
+                <label for="emission">Emission:</label><br>
+                <input type="text" id="emission" name="emission" placeholder="Emission" oninput="filterByEmission()">
+            </form>
+
+            <table id="footprint-table">
+                <thead>
+                    <tr>
+                        <th onClick="sortByCountry()">Land</th>
+                        <th onClick="sortByEmission()">Karbon Emissionen (Millionen Tonnen CO2)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>China</td>
+                        <td>10.065</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td>5.416</td>
+                    </tr>
+                    <tr>
+                        <td>Indien</td>
+                        <td>2.654</td>
+                    </tr>
+                    <tr>
+                        <td>Russland</td>
+                        <td>1.711</td>
+                    </tr>
+                    <tr>
+                        <td>Japan</td>
+                        <td>1.162</td>
+                    </tr>
+                    <tr>
+                        <td>Deutschland</td>
+                        <td>759</td>
+                    </tr>
+                    <tr>
+                        <td>Iran</td>
+                        <td>720</td>
+                    </tr>
+                    <tr>
+                        <td>Süd Korea</td>
+                        <td>659</td>
+                    </tr>
+                    <tr>
+                        <td>Saudi Arabien</td>
+                        <td>621</td>
+                    </tr>
+                    <tr>
+                        <td>Indonesien</td>
+                        <td>615</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+    <!-- html footer elemen-->
+    <footer id="footer">
+
+        <h2>Rechtliches</h2>
+        <p>Footprints is a non-commercial project.</p>
+        <p>Footprints uses no open source projects:</p>
+     
+        <p>Footprints uses the following open data sources:</p>
         <ul>
-            <li>Schöppler, Nadja</li>
 
+            <li>Carbon Emissions of Countries: <a
+                    href="https://climatetrade.com/which-countries-are-the-worlds-biggest-carbon-polluters/">https://climatetrade.com/which-countries-are-the-worlds-biggest-carbon-polluters</a>
+            </li>
         </ul>
-        <p>in a student project for IU.</p>
-    </article>
-    <!-- html table with carbon emissions per country -->
-    <div id="table">
-        <h2>Carbon Emmissionen per Land</h2>
-        <p>Die folgende Tabelle zeigt die Carbon Emissionen der 10 Länder mit den höchsten Emissionen.</p>
-        <p>Filtern nach:</p>
-        <form>
-            <label for="country">Land:</label>
-            <input type="text" id="country" name="country" placeholder="Land" oninput="filterByCountry()">
-            <label for="emission">Emission:</label>
-            <input type="text" id="emission" name="emission" placeholder="Emission" oninput="filterByEmission()">
-            <input type="submit" value="Filtern">
-        </form>
+        <p>© 2023 Footprints</p>
 
-        <table id="footprint-table">
-            <thead>
-                <tr>
-                    <th onClick="sortByCountry()">Land</th>
-                    <th onClick="sortByEmission()">Karbon Emissionen (kg CO2)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>China</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>USA</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td>Indien</td>
-                    <td>30</td>
-                </tr>
-                <tr>
-                    <td>Russland</td>
-                    <td>40</td>
-                </tr>
-                <tr>
-                    <td>Japan</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td>Deutschland</td>
-                    <td>60</td>
-                </tr>
-                <tr>
-                    <td>Iran</td>
-                    <td>70</td>
-                </tr>
-                <tr>
-                    <td>Saudi Arabien</td>
-                    <td>80</td>
-                </tr>
-                <tr>
-                    <td>Süd Korea</td>
-                    <td>90</td>
-                </tr>
-                <tr>
-                    <td>Kanada</td>
-                    <td>100</td>
-                </tr>
-            </tbody>
-        </table>
-
-
-        <!-- html footer elemen-->
-        <footer id="footer">
-
-            <h2>Rechtliches</h2>
-            <p>Footprints is a non-commercial project.</p>
-            <p>Footprints uses the following open source projects:</p>
-            <ul>
-                <li>Bootstrap</li>
-                <li>jQuery</li>
-                <li>Chart.js</li>
-            </ul>
-            <p>Footprints uses the following open data sources:</p>
-            <ul>
-
-                <li>Carbon Emissions of Countries: <a
-                        href="https://www.kaggle.com/yoannboyere/co2-ghg-emissionsdata">https://www.kaggle.com/yoannboyere/co2-ghg-emissionsdata</a>
-                </li>
-            </ul>
-            <p>© 2023 Footprints</p>
-
-        </footer>
-        <!-- include javascript -->
-        <script src="js/footprints.js"></script>
+    </footer>
+    <!-- include javascript -->
+    <script src="js/footprints.js"></script>
+</body>
 
 </html>
