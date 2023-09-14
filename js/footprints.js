@@ -58,10 +58,15 @@ function filterTable(table, col, query) {
     /* simplify the filterTable function by directly accessing the tables */
 function filterByCountry() {
 
-    filterTable(document.getElementById('footprint-table'), 0, document.getElementById('country').value);
+    filterTable(document.getElementById('footprint-table'), 0, sanitizeInput(document.getElementById('country').value));
 }
 function filterByEmission() {
-    filterTable(document.getElementById('footprint-table'), 1, document.getElementById('emission').value);
+    filterTable(document.getElementById('footprint-table'), 1, sanitizeInput(document.getElementById('emission').value));
+}
+
+/* a function to sanitize the input of the user */
+function sanitizeInput(input) {
+    return input.replace(/[^a-zA-Z0-9.,]/g, '');
 }
 
 function toggleHamburger() {
@@ -70,5 +75,16 @@ function toggleHamburger() {
       menu.style.display = "none";
     } else {
       menu.style.display = "flex";
+    }
+}
+/* a function to change the html direction according to the user language */
+window.onload = function() {
+   userLang = navigator.language || navigator.userLanguage; // get the user language
+   /* set the html direction according to the user language ar and he as examples of rtl-languages */
+    if (userLang.startsWith("ar") || userLang.startsWith("he")) {
+         document.getElementsByTagName("html")[0].setAttribute("dir", "rtl");
+    }
+    else {
+         document.getElementsByTagName("html")[0].setAttribute("dir", "ltr");
     }
 }

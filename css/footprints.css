@@ -54,6 +54,8 @@ nav {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    position: end;
+
 }
 nav ul {
     display: flex;
@@ -137,6 +139,20 @@ input {
 #hamburger {
     display: none;
 }
+
+/* query for rtl languages */
+
+html[dir="rtl"] {
+    direction: rtl;
+}
+
+html[dir="rtl"] header h1 {
+    writing-mode: lr-tb;
+    transform: rotate(-90deg);
+}
+
+
+
 
 /* media query for small mobile devices */
 @media only screen and (max-width: 481px) {
