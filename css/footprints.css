@@ -25,7 +25,8 @@ header h1 {
     padding: 0;
     font-size: 2em;
     font-weight: 400;
-    display: 80;
+    display: block;
+    width: 80%;
     text-align: center;
     text-shadow: 0.1em 0.1em 0.1em #000;
     color: #fff;
@@ -43,7 +44,6 @@ h2 {
     font-family: sans-serif;
 }
 header img {
-    display: 20%;
     border-radius: 50%;
     margin: 0;
     padding: 0;
@@ -54,7 +54,6 @@ nav {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    position: end;
 
 }
 nav ul {
@@ -98,11 +97,9 @@ nav ul li a {
 }
 #filter-form {
    width:20em;
-   display: 100%;
    margin: 2em auto 2em auto;
 }
 table {
-    display: 100%;
     margin: 2em auto 2em auto;
 }
 th {
@@ -179,7 +176,6 @@ html[dir="rtl"] header h1 {
         align-items: center;
     }
     header h1 {
-        display: 100%;
         text-align: center;
         writing-mode: lr-tb;
         transform: rotate(0deg);
@@ -193,9 +189,6 @@ html[dir="rtl"] header h1 {
         background-color: #C3C2C0;
     }
 
-    nav {
-        display: 10%;
-    }
 
 
     nav ul li {
@@ -205,29 +198,24 @@ html[dir="rtl"] header h1 {
     }
 
     main {
-        display: 90%;
+        width: 90%;
     }
 }
 /* media query for tablets */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
-    nav {
-        display: 10%;
-    }
+
     main {
-        display: 90%;
+        width: 90%;
     }
 
 }
 /* media query for  desktops */
 @media only screen and (min-width: 1025px) {
 
-    nav {
-        display: 15%;
-    }
+
     main {
-        display: 80%;
+        width: 80%;
     }
 
 }
-```
