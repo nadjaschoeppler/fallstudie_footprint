@@ -46,13 +46,15 @@
         </article>
         <!-- html table with carbon emissions per country -->
         <div id="table">
-            <h2>Karbon Emmissionen per Land</h2>
-            <p>Die folgende Tabelle zeigt die Carbon Emissionen der 10 Länder mit den höchsten Emissionen.</p>
+            <h2>Karbon Emmissionen per Unternehmen</h2>
+            <p>Die folgende Tabelle zeigt die fiktiven Carbon Emissionen einiger Unternehmen.</p>
            
             <form id="filter-form">
                 <h3>Filtern nach:</h3>
                 <label for="country">Land:</label><br>
                 <input type="text" id="country" name="country" placeholder="Land" oninput="filterByCountry()"><br>
+                <label for="company">Unternehmen:</label><br>
+                <input type="text" id="company" name="company" placeholder="Unternehmen" oninput="filterByCompany()"><br>
                 <label for="emission">Emission:</label><br>
                 <input type="text" id="emission" name="emission" placeholder="Emission" oninput="filterByEmission()">
             </form>
@@ -61,48 +63,65 @@
                 <thead>
                     <tr>
                         <th onClick="sortByCountry()">Land</th>
+                        <th onClick="sortByCompany()">Unternehmen</th>
                         <th onClick="sortByEmission()">Karbon Emissionen (Millionen Tonnen CO2)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>China</td>
-                        <td>10.065</td>
+                        <td>Guan-Ho</td>
+                        <td>9.000</td>
+                    </tr>
+                    <tr>
+                        <td>China</td>
+                        <td>ApEs</td>
+                        <td>1.065</td>
                     </tr>
                     <tr>
                         <td>USA</td>
-                        <td>5.416</td>
+                        <td>OpenAI</td>
+                        <td>1.416</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td>SpaceX</td>
+                        <td>2.500</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td>Amazon</td>
+                        <td>1.500</td>
                     </tr>
                     <tr>
                         <td>Indien</td>
+                        <td>Mumbay Pharma</td>
                         <td>2.654</td>
                     </tr>
                     <tr>
                         <td>Russland</td>
+                        <td>Gasporom</td>
                         <td>1.711</td>
                     </tr>
+
                     <tr>
-                        <td>Japan</td>
-                        <td>1.162</td>
+                        <td>Deutschland</td>
+                        <td>BASF</td>
+                        <td>359</td>
                     </tr>
                     <tr>
                         <td>Deutschland</td>
-                        <td>759</td>
-                    </tr>
-                    <tr>
-                        <td>Iran</td>
-                        <td>720</td>
-                    </tr>
-                    <tr>
-                        <td>Süd Korea</td>
-                        <td>659</td>
+                        <td>BMW</td>
+                        <td>210</td>
                     </tr>
                     <tr>
                         <td>Saudi Arabien</td>
+                        <td>WC 2034</td>
                         <td>621</td>
                     </tr>
                     <tr>
                         <td>Indonesien</td>
+                        <td>Jakkharta</td>
                         <td>615</td>
                     </tr>
                 </tbody>

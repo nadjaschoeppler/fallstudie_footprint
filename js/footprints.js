@@ -1,6 +1,7 @@
 
 var sortOrderCountry = -1;
 var sortOrderEmission = -1;
+var sortOrderCompany = -1;
 
 /* a function to sort a table by a column */
 function sortTable(table, col, reverse, compareFunction) {
@@ -38,8 +39,12 @@ function sortByCountry() {
     sortTable(document.getElementById('footprint-table'), 0, sortOrderCountry, compareTextcells);
     sortOrderCountry *= -1;
 }
+function sortByCompany() {
+    sortTable(document.getElementById('footprint-table'), 1, sortOrderCompany, compareTextcells);
+    sortOrderCompany *= -1;
+}
 function sortByEmission() {
-    sortTable(document.getElementById('footprint-table'), 1, sortOrderEmission, compareNumbercells);
+    sortTable(document.getElementById('footprint-table'), 2, sortOrderEmission, compareNumbercells);
     sortOrderEmission *= -1;
 }
 
@@ -59,8 +64,11 @@ function filterByCountry() {
 
     filterTable(document.getElementById('footprint-table'), 0, document.getElementById('country').value);
 }
+function filterByCompany() {
+    filterTable(document.getElementById('footprint-table'), 1, document.getElementById('company').value);
+}
 function filterByEmission() {
-    filterTable(document.getElementById('footprint-table'), 1, document.getElementById('emission').value);
+    filterTable(document.getElementById('footprint-table'), 2, document.getElementById('emission').value);
 }
 
 /* a function to sanitize the input of the user */
