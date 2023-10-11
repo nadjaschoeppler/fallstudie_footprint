@@ -31,7 +31,8 @@ function compareNumbercells(a, b, col, reverse) {
 
     return reverse *
         (
-            Number(a.cells[col].textContent.trim().replace(".", "")) - Number(b.cells[col].textContent.trim().replace(".", ""))
+            Number(a.cells[col].textContent.trim().replace(".", ""))
+            - Number(b.cells[col].textContent.trim().replace(".", ""))
         )
 }
 /* simplify the sortTable function by directly accessing the tables */
@@ -86,7 +87,7 @@ function toggleHamburger() {
 }
 /* a function to change the html direction according to the user language */
 window.onload = function () {
-    userLang = navigator.language || navigator.userLanguage; // get the user language
+    userLang = navigator.language; // get the user language
     /* set the html direction according to the user language ar and he as examples of rtl-languages */
     if (userLang.startsWith("ar") || userLang.startsWith("he")) {
         document.getElementsByTagName("html")[0].setAttribute("dir", "rtl");

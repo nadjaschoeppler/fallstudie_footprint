@@ -1,10 +1,12 @@
-<html >
+<html lang="de">
 
 <head>
     <title>Footprints</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="description" content="Footprints gives an overview about carbon emissions.">
-    <meta name="keywords" content="carbon, emissions, footprint, footprints, co2, co2 emissions, carbon emissions">
+    <meta name="description" content="Footprints gives an overview about carbon dioxide emissions.">
+    <meta name="keywords" content="carbon dioxide, emissions, footprint, footprints, co2, co2 emissions, carbon dioxide emissions">
     <meta name="author" content="Nadja Schöppler">
 
 
@@ -22,7 +24,7 @@
             <ul id="menuItems">
                 <li><a href="#footer">Rechtliches</a></li>
                 <li><a href="#about">Über diese Seite</a></li>
-                <li><a href="#table">Karbon Emissionen</a></li>
+                <li><a href="#table">Kohlenstoffdioxid Emissionen</a></li>
           
             </ul>  
                <a id="hamburger" href="javascript:void(0);" class="icon" onclick="toggleHamburger()">
@@ -36,7 +38,7 @@
         <!-- html article element 'about' -->
         <article id="about">
             <h2>Über diese Seite</h2>
-            <p>Footprints gives an overview about carbon emissions per land.</p>
+            <p>Footprints gives an overview about carbon dioxide emissions per land.</p>
             <p>Footprints is developed by </p>
             <ul>
                 <li>Schöppler, Nadja</li>
@@ -44,10 +46,10 @@
             </ul>
             <p>in a student project for IU.</p>
         </article>
-        <!-- html table with carbon emissions per country -->
+        <!-- html table with carbon dioxide emissions per country -->
         <div id="table">
-            <h2>Karbon Emmissionen per Unternehmen</h2>
-            <p>Die folgende Tabelle zeigt die fiktiven Carbon Emissionen einiger Unternehmen.</p>
+            <h2>Kohlenstoffdioxid Emissionen per Unternehmen</h2>
+            <p>Die folgende Tabelle zeigt die fiktiven Kohlenstoffdioxid Emissionen einiger Unternehmen.</p>
            
             <form id="filter-form">
                 <h3>Filtern nach:</h3>
@@ -64,7 +66,7 @@
                     <tr>
                         <th onClick="sortByCountry()">Land</th>
                         <th onClick="sortByCompany()">Unternehmen</th>
-                        <th onClick="sortByEmission()">Karbon Emissionen (Millionen Tonnen CO2)</th>
+                        <th onClick="sortByEmission()">Kohlenstoffdioxid Emissionen (Millionen Tonnen CO2)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -140,8 +142,8 @@
         <p>Footprints uses the following open data sources:</p>
         <ul>
 
-            <li>Carbon Emissions of Countries: <a
-                    href="https://climatetrade.com/which-countries-are-the-worlds-biggest-carbon-polluters/">https://climatetrade.com/which-countries-are-the-worlds-biggest-carbon-polluters</a>
+            <li>Carbon dioxide Emissions of Countries: <a
+                    href="https://climatetrade.com/which-countries-are-the-worlds-biggest-carbon-polluters/">https://climatetrade.com/ which-countries-are-the-worlds-biggest-carbon-polluters</a>
             </li>
             <li>Concept for a Hamburger menu: <a href="https://www.w3schools.com/howto/howto_js_mobile_navbar.asp">https://www.w3schools.com/howto/howto_js_mobile_navbar.asp</a></li>
         </ul>
